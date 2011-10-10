@@ -1,0 +1,3 @@
+output.max=min(input.b,input.c) 
+output.min=min(input.b,input.c) 
+output.sum=input.a+input.b+input.c

@@ -1,0 +1,14 @@
+== Expression Parser
+
+Currently we use an expression parser that is written in java, run on a separate webserver, and called through xml webservices.  This proof of concept shows that we can rewrite it using ruby.  In this way we can simplifiy our process and make it much more lightweight (i.e. run the code locally or at the very minimum make a very light webservice such as a sinatra application)
+
+
+== Getting Started
+
+1. Run the following command:
+  ruby expressionparse.rb "Input Output" "output.max output.min output.sum"
+
+2. Explanation:
+  - Define classes "input" and "output" so that we can use them.
+  - properties for the classes are defined on the fly
+  - output properties max, min, sum to csv
