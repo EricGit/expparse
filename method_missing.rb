@@ -1,3 +1,4 @@
+#class that dynamically defines properties and defaults them to 0.0 on the fly
 class DynAttrClass
   def method_missing(sym, *args, &block)
     name_of_method = sym.to_s
@@ -26,12 +27,3 @@ class DynAttrClass
     send sym, *args
   end
 end
-
-s = DynAttrClass.new
-p s.blah
-s.blah = "hello"
-puts s.respond_to? :blah=
-puts s.blah
-puts s.respond_to? :blah
-s.blah = "hello2"
-puts s.blah
