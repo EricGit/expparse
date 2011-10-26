@@ -1,7 +1,7 @@
 require 'CSV'
 
 #A class that defines property (set/get) on the fly as required
-#Defaults to 
+#Defaults properties to 0.0 so we can sum without presetting
 class DynAttrClass
   def method_missing(sym, *args, &block)
     name_of_method = sym.to_s
